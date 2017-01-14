@@ -6,5 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'GitItBack' });
 });
 
+router.get('/home', function(req, res, next) {
+  res.render('index', { title: 'GitItBack' });
+});
+
+
 
 module.exports = router;

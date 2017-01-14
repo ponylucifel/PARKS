@@ -6,8 +6,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>Login Page</h1>
 
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">GitItBack</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home">Home</a></li>
+                <li class="active"><a href="login">Log In</a></li>
+                <li class="active"><a href="signup">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h1>Login Page</h1>
+    <h3><%= message%></h3>
     <form name=f1>
         <div>
             <p><input class="input-lg" name="username" id="username" placeholder="Username" required></p>
