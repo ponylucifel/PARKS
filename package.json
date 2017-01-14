@@ -1,0 +1,23 @@
+{
+  "name": "spark",
+  "version": "1.0.0",
+  "description": "This is a group project created during HackUCI 2016.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ponylucifel/SPARK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ponylucifel/SPARK/issues"
+  },
+  "homepage": "https://github.com/ponylucifel/SPARK#readme",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0"
+  }
+}
