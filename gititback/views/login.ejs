@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>Login Page</h1>
+
+    <form name=f1>
+        <div>
+            <p><input class="input-lg" name="username" id="username" placeholder="Username" required></p>
+            <p><input class="input-lg" type="password" name="pass" id="pass" placeholder="Password" required></p>
+            <button type="submit" class="btn btn-primary" onclick="f1.action='login';f1.method='post'; return true;">SignIn</button>
+        </div>
+    </form>
+
+</body>
+</html>
