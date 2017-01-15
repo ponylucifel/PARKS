@@ -11,7 +11,8 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-    res.render('lost', { title: 'Lost Item' });
+    console.log(req.body.username);
+    res.render('lost', { title: 'Lost Item', username:req.body.username});
 });
 
 

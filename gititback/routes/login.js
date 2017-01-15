@@ -16,11 +16,11 @@ router.post('/', function(req, res, next) {
     userModel.findOne({username: req.body.username}, "pass", function(err, user){
 	if ((user==null)||(user.pass != req.body.pass)) {
 		console.log("Failed to log in")
-		res.render('login', {title:'GIB login', message:'Wrong email/password entered.'})
+		res.render('login', {title:'Login', message:'Wrong email/password entered.'})
 	}
 	else {
 		console.log("user has logged in successfully!")
-		res.redirect('dashboard')
+		res.render('dashboard', {title: 'Dashboard', username: req.body.username});
 	}
     })
 });

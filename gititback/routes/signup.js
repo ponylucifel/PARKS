@@ -26,8 +26,8 @@ router.post('/', function(req, res, next){
 	   else
 	   	console.log('Saved: ', data);
    });
-    
-   res.redirect('dashboard');
+
+    res.render('dashboard', {title: 'Dashboard', username: req.body.username});
 });
 
 module.exports = router;

@@ -15,8 +15,15 @@
 
     <div id="navbar"></div>
 
-    <h1>Dashboard</h1>
-    <a class="btn btn-default" href="lost">Report item lost</a><br><br><br>
-    <a class="btn btn-default" href="found">Report item found</a>
+    <h1>Welcome back, <%= username %></h1>
+    <form action="lost">
+        <input type="hidden" name="username" value="<%= username%>" />
+        <input type="submit" class="btn btn-default" value="Report Lost Item">
+    </form>
+    <br><br><br>
+    <form action="found">
+        <input type="hidden" name="username" value="<%= username%>" />
+        <input type="submit" class="btn btn-default" value="Report Found Item">
+    </form>
 </body>
 </html>
