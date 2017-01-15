@@ -12,14 +12,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    if (userModel.find({username: req.body.username}).where('password').equals(req.body.pass)) {
-	console.log(username, )
-	res.redirect('dashboard')
-    }
-    else {
-	console.log('gtfo!')
-	res.render('login', {title:'GIB login', message:'Wrong email/password entered.'})
-    }
+    userModel.findOne({username: req.body.username}, "pass", function(err, user){
+	if ((user==null)||(user.pass != req.body.pass)) {
+		console.log("Failed to log in")
+		res.render('login', {title:'GIB login', message:'Wrong email/password entered.'})
+	}
+	else {
+		console.log("user has logged in successfully!")
+		res.redirect('dashboard')
+	}
+    })
 });
 
 module.exports = router;
