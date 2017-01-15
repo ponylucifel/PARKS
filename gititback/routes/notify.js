@@ -7,8 +7,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    setTimeout(function(){
-        res.render('dashboard', { title: 'Dashboard' });
-    }, 5000);
-
+    res.render('dashboard', { title: 'Dashboard', username: req.body.username});
 });
+
+module.exports = router;
