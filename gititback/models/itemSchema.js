@@ -2,11 +2,14 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 var itemSchema = new Schema({
-    user: {name: String, email: String},
+    username: String,
+    email: String,
+    phone: String,
+    location: {latitude:Number, longitude:Number},
+    date: Number,
+    text: String,
     createdTime: {type: Number, default: Date.now},
-    loggedinTime: {type: Number, default: null},
-    description: {location: {latitude:Number, longitude:Number},
-	    date:Number, text:String}
+    loggedinTime: {type: Number, default: null}
 });
 
 module.exports = mongoose.model('Items', itemSchema);

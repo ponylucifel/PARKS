@@ -1,17 +1,9 @@
-/**
- * Created by thanaponsathirathiwat on 1/14/17.
- */
-
 var express = require('express');
 var router = express.Router();
+var ItemModel = require('../models/itemSchema')
 
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-    res.render('index', { title: 'GitItBack' });
-});
-
-router.get('/', function(req, res, next) {
-    res.render('lost', { title: 'GIB Lost Item' });
+router.post('/', function(req, res, next) {
+    //res.render('response', {title:''});
 });
 
 

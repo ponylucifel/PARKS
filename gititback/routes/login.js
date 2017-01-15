@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
 	}
 	else {
 		console.log("user has logged in successfully!")
-		res.redirect('dashboard')
+		res.render('dashboard', {username: req.body.username})
 	}
     })
 });

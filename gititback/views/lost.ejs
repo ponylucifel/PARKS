@@ -3,23 +3,33 @@
 <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load('/templates/navbar.html');
+        });
+    </script>
 </head>
     <body>
-
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="">GitItBack</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="home">Home</a></li>
-                    <li class="active"><a href="login">Log In</a></li>
-                    <li class="active"><a href="signup">Sign Up</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div id="navbar"></div>
         <h1><%= title %></h1>
         <p>Lost item report</p>
+
+        <form action="" method="post">
+            <div class="col-sm-6 col-sm-offset-3">
+                <p><input class="input form-control" name="first" id="first" placeholder="First Name" required></p>
+                <p><input class="input form-control" name="last" id="last" placeholder="Last Name" required></p>
+                <p><input class="input form-control" name="username" id="username" placeholder="Username" required></p>
+                <p><input class="input form-control" type="password" name="pass" id="pass" placeholder="Password" required></p>
+                <p><input class="input form-control" name="email" id="email" placeholder="Email" required></p>
+                <p><input class="input form-control" name="phone" id="phone" placeholder="Phone number" required></p>
+                <p><input class="input form-control" name="location" id="location" placeholder="Location" required></p>
+                <button type="submit" class="btn btn-sm btn-success col-sm-4 col-sm-offset-4">
+                    <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Submit
+                </button>
+            </div>
+        </form>
     </body>
 </html>
