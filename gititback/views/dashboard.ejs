@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <% if(title){ %>
+        <title><%= title %></title>
+    <% } else{ %>
+        <title>Dashboard</title>
+    <% } %>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load('/templates/dash_navbar.html');
+        });
+    </script>
 </head>
 <body>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="">GitItBack</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="home">Home</a></li>
-                <li class="active"><a href="login">Log In</a></li>
-                <li class="active"><a href="signup">Sign Up</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
-    <h1>Dashboard</h1>
-    <a class="btn btn-default" href="lost">Report item lost</a><br><br><br>
-    <a class="btn btn-default" href="found">Report item found</a>
+    <% if(username){ %>
+        <h1>Welcome back, <%= username %></h1>
+    <% } else{ %>
+        <title>Welcome back.</title>
+    <% } %>
+
+    <!--Profile picture here-->
+    <div>
+        <div>
+            <img src="http://placehold.it/150x150" class="img-circle">
+        </div>
+        <div>
+            <h4> Name: Test User</h4>
+            <h4> Rank: Angel</h4>
+        </div>
+    </div>
+
+
+
+
+    <form action="lost">
+        <input type="hidden" name="username" value="<%= username%>" />
+        <input type="submit" class="btn btn-default" value="Report Lost Item">
+    </form>
+    <br>
+    <form action="found">
+        <input type="hidden" name="username" value="<%= username%>" />
+        <input type="submit" class="btn btn-default" value="Report Found Item">
+    </form>
+
+    <h3>Found Items</h3>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+
 </body>
 </html>

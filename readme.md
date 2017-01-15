@@ -3,7 +3,8 @@ This document will guide you how to set this project up on your device for devel
 
 First, make sure your have nodejs and npm package manager in your local machine.  If you're not farmiliar with them at all, most likely you do not have these api's on your local machine.
 
-Please check this page out for nodejs: https://nodejs.org/en/
+Please check this page out for nodejs: https://nodejs.org/en/.  
+Download and install version 6.2.0.
 
 Please check this page out on how to install npm into your device: https://www.npmjs.com
 
