@@ -11,10 +11,11 @@ router.get('/home', function(req, res, next) {
     res.render('index', { title: 'GitItBack' });
 });
 
-//leave only alphabets, change the rest to "-"
-String.prototype.cleanup = function() {
-   return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-");
-}
+router.get('/', function(req, res, next) {
+    console.log(req.body);
+    
+    res.render('found', {title: 'Search Item For', username: req.body.username});
+});
 
 // Input data:
 // item_name
@@ -24,57 +25,43 @@ String.prototype.cleanup = function() {
 
 router.post('/', function(req, res, next) {
 
+String.prototype.cleanup = function() {
+   return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-"); //leave only alphabets, change the rest to "-"
+}
+
 	//Keywords parsing:
 	var tempStringDescription = req.body.description
+	tempStringDescription = tempStringDescription.trim();
 	tempStringDescription = tempStringDescription.cleanup();
 	var itemKeywords = tempStringDescription.split("-");		//array of keywords
+	console.log(itemKeywords)
+
+	//todo rank itemKeywords based on something!
+
 
 	//date
 	var tempDate = req.body.date
-
 	//location
 	var location = req.body.location
 
+	//container for query result
+	var myJsonArray = []
+	
+	cursor = itemModel.find({ $or: [{text:req.body.item_name}, {text:location},{text:itemKeywords[0]}] }).cursor();
+	cursor.on('data', function(doc) {
+	  // Called once for every document
+	  console.log(doc)			
+	  myJsonArray.push(doc);		//join all json into array "result from query"
 
-	var myJson = "testData"
+	});
+	cursor.on('close', function() {
+	  // Called when done
+	});
 
-
-    res.render('found', { title: 'Seach Result for ', item_name: itemKeywords, myjsonData = myJson });
+    res.render('found', {title: 'Result Item for ', myJson: myJsonArray, myItemName: req.body.item_name, username: req.body.username});
 });
 
 //{ $or: [{a: 1}, {b: 1}] }
-
-
-/*
-itemModel.find({ $or: [{a: req.body.description}, {b: 1}] }, "pass", function(err, user){
-	if ((user==null)||(user.pass != req.body.pass)) {
-		console.log("Failed to log in")
-		res.render('login', {title:'Login', message:'Wrong email/password entered.'})
-	}
-	else {
-		console.log("user has logged in successfully!")
-		res.render('dashboard', {title: 'Dashboard', username: req.body.username});
-	}
-    })
-
-
-// Find a single movie by name.
-Movie.findOne({ title: 'Thor' }, function(err, thor) {
-  if (err) return console.error(err);
-  console.dir(thor);
-});
-// Find all movies.
-Movie.find(function(err, movies) {
-  if (err) return console.error(err);
-  console.dir(movies);
-});
-// Find all movies that have a credit cookie.
-Movie.find({ hasCreditCookie: true }, function(err, movies) {
-  if (err) return console.error(err);
-  console.dir(movies);
-});
-
-*/
 
 // Item Schema:
 // 	username: String,
