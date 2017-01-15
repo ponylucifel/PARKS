@@ -19,9 +19,9 @@
 
 var express = require('express');
 var router = express.Router();
-var itemModel = require('../models/itemSchema')
-var userModel = require('../models/userSchema')
-var moment = require('moment')
+var itemModel = require('../models/itemSchema');
+var userModel = require('../models/userSchema');
+var moment = require('moment');
 
 router.get('/', function(req, res, next) {
     console.log(req.body.username);
@@ -34,6 +34,8 @@ router.post('/', function(req, res, next){
         username: req.body.username,
         itemName: req.body.itemName,
         email: req.body.email,
+        isLost: true,
+        isActive: true,
         phone: req.body.phone,
         date: reporteddate,
         location: req.body.location,

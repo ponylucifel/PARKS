@@ -5,11 +5,8 @@
 var express = require('express');
 var router = express.Router();
 var itemModel = require('../models/itemSchema');
+var moment = require('moment');
 
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-    res.render('index', { title: 'GitItBack' });
-});
 
 router.get('/', function(req, res, next) {
     console.log(req.body);
@@ -24,41 +21,27 @@ router.get('/', function(req, res, next) {
 // description
 
 router.post('/', function(req, res, next) {
-
-String.prototype.cleanup = function() {
-   return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-"); //leave only alphabets, change the rest to "-"
-}
-
-	//Keywords parsing:
-	var tempStringDescription = req.body.description
-	tempStringDescription = tempStringDescription.trim();
-	tempStringDescription = tempStringDescription.cleanup();
-	var itemKeywords = tempStringDescription.split("-");		//array of keywords
-	console.log(itemKeywords)
-
-	//todo rank itemKeywords based on something!
-
-
-	//date
-	var tempDate = req.body.date
-	//location
-	var location = req.body.location
-
-	//container for query result
-	var myJsonArray = []
-	
-	cursor = itemModel.find({ $or: [{text:req.body.item_name}, {text:location},{text:itemKeywords[0]}] }).cursor();
-	cursor.on('data', function(doc) {
-	  // Called once for every document
-	  console.log(doc)			
-	  myJsonArray.push(doc);		//join all json into array "result from query"
-
+	reporteddate = moment(req.body.date, ["MM-DD-YYYY", "DD-MM-YYYY"]).unix();
+	var newItem = new itemModel ({
+		username: req.body.username,
+		itemName: req.body.itemName,
+		email: req.body.email,
+		isLost: false,
+		isActive: true,
+		phone: req.body.phone,
+		date: reporteddate,
+		location: req.body.location,
+		text: req.body.text
 	});
-	cursor.on('close', function() {
-	  // Called when done
+	newItem.save(function(err,data){
+		if(err){
+			console.log(err)
+		}
+		else {
+			console.log('Saved! ', newItem)
+			res.render('notify', { message: 'Your response has been submitted succesfully.  Thank you for being so kind.  You bring us one step closer to Utopia.', username:req.body.username})
+		}
 	});
-
-    res.render('found', {title: 'Result Item for ', myJson: myJsonArray, myItemName: req.body.item_name, username: req.body.username});
 });
 
 //{ $or: [{a: 1}, {b: 1}] }
