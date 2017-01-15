@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 		//container for Item Lose query result
 		//var myJsonArray = []
 		
-		cursor = itemModel.find().limit(5).cursor();
+		cursor = itemModel.find({username: req.body.username}).cursor();	//all items related to username
 		cursor.on('data', function(doc) {
 		  // Called once for every document
 		  console.log(doc)
@@ -34,7 +34,7 @@ router.get('/', function(req, res, next) {
 		//container for Ranking query result
 		//var myRankArray = []
 		
-		cursor = userModel.find().limit(5).cursor();
+		cursor = userModel.find({username: req.body.username}).cursor();	//will get based on ranking
 		cursor.on('data', function(doc) {
 		  // Called once for every document
 		console.log(doc)

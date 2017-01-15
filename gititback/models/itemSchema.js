@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var itemSchema = new Schema({
     username: String,
+    isLost: {type: Boolean, default: true},
     email: String,
     phone: String,
     location: {latitude:Number, longitude:Number},
