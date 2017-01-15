@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var userModel = require('../models/userSchema');
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
@@ -11,10 +12,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    if(req.body.username == "root" && req.body.pass == "pass")
-        res.redirect('dashboard');
-    else
-        res.render('login', { title: 'GIB Login', message:'Wrong password entered.'});
+    if (userModel.find({username: req.body.username}).where('password').equals(req.body.pass)) {
+	console.log(username, )
+	res.redirect('dashboard')
+    }
+    else {
+	console.log('gtfo!')
+	res.render('login', {title:'GIB login', message:'Wrong email/password entered.'})
+    }
 });
 
 module.exports = router;
