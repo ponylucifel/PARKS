@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
-    res.render('index', { title: 'GitItBack' });
+    res.render('index', { title: 'returnto.me' });
 });
 
 router.get('/', function(req, res, next) {
     console.log(req.body);
-    res.render('login', { title: 'GIB Login', message:''});
+    res.render('login', { title: 'Login', message:''});
 });
 
 router.post('/', function(req, res, next) {

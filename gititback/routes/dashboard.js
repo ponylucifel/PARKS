@@ -3,11 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
-    res.render('index', { title: 'GitItBack' });
+    res.render('index', { title: 'returnto.me' });
 });
 
 router.get('/', function(req, res, next) {
-    res.render('dashboard', { title: 'GIB Dashboard' });
+    res.render('dashboard', { title: 'Dashboard' });
 });
 
 module.exports = router;

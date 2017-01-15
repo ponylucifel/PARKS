@@ -6,9 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
-
+/*--------------------------------------------------------------*/
+/*  This part of the style sheet controls the homepage styling  */
+/*--------------------------------------------------------------*/
 body#bg{
   background: url('https://static.pexels.com/photos/36079/pexels-photo.jpg') no-repeat 50% 50% fixed;
+  /*background: url('https://static.pexels.com/photos/256485/pexels-photo-256485.jpeg') no-repeat 50% 50% fixed;*/
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,14 +24,66 @@ body#bg{
   background: rgba(34,34,34,0.75);
 }
 .siteSlogan {
-  text-align: center;
   text-transform: uppercase;
   text-shadow: #363535 3px 3px 5px;
   font-variant: small-caps;
   font-size: 45pt;
-
-  margin: auto;
   color: white;
+  margin: auto;
   text-align: center;
-
 }
+
+/*--------------------------------------------------------------*/
+/*                          END                                 */
+/*--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------*/
+/*     This part of the style sheet controls nav bar styling    */
+/*--------------------------------------------------------------*/
+.navbar {
+  /*background:transparent;*/
+  border: transparent;
+}
+
+.nav-button{
+  text-transform: uppercase;
+  text-shadow: #363535 3px 3px 5px;
+  font-variant: small-caps;
+  font-size: 15pt;
+  color: white!important;
+  margin: auto;
+}
+
+.siteLogo {
+  background: url('../images/sitelogo_scale.png');
+  width: 270px;
+  height: 65px;
+  max-width: 100%;
+  max-height:100%;
+  display:block;
+  margin: auto;
+}
+
+/*--------------------------------------------------------------*/
+/*                          END                                 */
+/*--------------------------------------------------------------*/
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/* This part of the style sheet controls the style of login page*/
+/*--------------------------------------------------------------*/
+.center{
+  text-align: center;
+}
+
+
+
+/*--------------------------------------------------------------*/
+/*                          END                                 */
+/*--------------------------------------------------------------*/
