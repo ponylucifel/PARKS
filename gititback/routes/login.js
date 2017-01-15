@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
 	}
 	else {
 		console.log("user has logged in successfully!")
-		res.render('dashboard', {title: 'Dashboard', username: req.body.username});
+		res.render('dashboard', {title: 'Dashboard', myItemJson: null, myRankJson: null,username: req.body.username});
 	}
     })
 });
