@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 var itemSchema = new Schema({
-    username: String,
+	itemName: String,
+    userame: String,
     isLost: {type: Boolean, default: true},
     email: String,
     phone: String,
