@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var ItemModel = require('../models/itemSchema')
 
-router.post('/', function(req, res, next) {
-    //res.render('response', {title:''});
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+	    res.render('index', { title: 'GitItBack' });
+});
+
+router.get('/', function(req, res, next) {
+	    res.render('lost', { title: 'GIB Lost Item' });
 });
 
 

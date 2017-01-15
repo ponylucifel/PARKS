@@ -4,11 +4,11 @@ var userModel = require('../models/userSchema');
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
-    res.render('index', { title: 'GitItBack' });
+    res.render('index', { title: 'returnto.me' });
 });
 
 router.get('/', function(req, res, next) {
-    res.render('signup', { title: 'GIB Sign Up' });
+    res.render('signup', { title: 'Sign Up' });
 });
 
 router.post('/', function(req, res, next){
@@ -26,8 +26,8 @@ router.post('/', function(req, res, next){
 	   else
 	   	console.log('Saved: ', data);
    });
-    
-   res.redirect('dashboard');
+
+    res.render('dashboard', {title: 'Dashboard', username: req.body.username});
 });
 
 module.exports = router;
