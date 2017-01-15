@@ -4,7 +4,7 @@ var userModel = require('../models/userSchema');
 var itemModel = require('../models/itemSchema');
 
 var myJsonArray = []
-var myRankArray = []
+var myRankArray = 0
 /* GET home page. */
 router.get('/home', function(req, res, next) {
     res.render('index', { title: 'returnto.me' });
@@ -50,9 +50,10 @@ router.post('/', function(req, res, next) {
 					cursor.on('data', function(doc) {
 					  // Called once for every document
 					console.log(doc)
-					JSON.stringify(doc)			
-					myRankArray.push(doc)		//join all json into array "result from query"
-					console.log("myRANK : %s",myRankArray)	
+					//JSON.stringify(doc)			
+					var myRank = JSON.parse(doc);			
+					myRankArray = myRank.rank		//join all json into array "result from query"
+					console.log("myRANK : %s",myRankArray)		
 					});
 					cursor.on('close', function() {
 					  // Called when done
@@ -68,8 +69,8 @@ router.post('/', function(req, res, next) {
 
 				//doThisFirst()
 
-				var myJsonString = JSON.stringify(myRankArray)
-				console.log("myJSONSTRING %s",myJsonString)
+				// var myJsonString = JSON.stringify(myRankArray)
+				// console.log("myJSONSTRING %s",myJsonString)
 
 				/////////////////////////////////////////////////////////
 
