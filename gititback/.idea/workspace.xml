@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4476902d-4582-4655-9e84-aead5e2521c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/dash_navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/logout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/notify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/profile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/logout.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/notify.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/profile.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/itemSchema.js" afterPath="$PROJECT_DIR$/models/itemSchema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/userSchema.js" afterPath="$PROJECT_DIR$/models/userSchema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/dashboard.js" afterPath="$PROJECT_DIR$/routes/dashboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/found.js" afterPath="$PROJECT_DIR$/routes/found.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/login.js" afterPath="$PROJECT_DIR$/routes/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/lost.js" afterPath="$PROJECT_DIR$/routes/lost.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/dashboard.ejs" afterPath="$PROJECT_DIR$/views/dashboard.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/found.ejs" afterPath="$PROJECT_DIR$/views/found.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/lost.ejs" afterPath="$PROJECT_DIR$/views/lost.ejs" />
     </list>
     <ignored path="gititback.iws" />
@@ -46,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/routes/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+              <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -56,9 +43,9 @@
         <entry file="file://$PROJECT_DIR$/routes/found.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <element signature="e#0#55#0" expanded="false" />
+                <marker date="1484504953000" expanded="false" signature="0:55" placeholder="/** Created by thanaponsathirathiwat on 1/14/17. ...*/" />
               </folding>
             </state>
           </provider>
@@ -84,11 +71,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="itemSchema.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/itemSchema.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/login.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,8 +94,8 @@
       <file leaf-file-name="lost.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/lost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59210527">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.024671054">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -792,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/itemSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44407895">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -808,20 +797,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/found.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#55#0" expanded="false" />
+            <marker date="1484504953000" expanded="false" signature="0:55" placeholder="/** Created by thanaponsathirathiwat on 1/14/17. ...*/" />
           </folding>
         </state>
       </provider>
@@ -842,18 +823,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/itemSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/lost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59210527">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.024671054">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

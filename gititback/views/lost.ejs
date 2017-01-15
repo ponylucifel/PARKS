@@ -21,11 +21,11 @@
 
                 <p><input class="input form-control" name="item_name" id="itemName" placeholder="Item Name" required></p>
                 <p><input type="hidden" class="input form-control" name="username" id="username" value="<%= username%>"></p>
-                <p><input class="input form-control" name="email" id="email" placeholder="Email" required></p>
-                <p><input class="input form-control" name="phone" id="phone" placeholder="Phone number" required></p>
+                <p><input class="input form-control" name="email" id="email" placeholder="Item Contact Email" required></p>
+                <p><input class="input form-control" name="phone" id="phone" placeholder="Item Contact Phone number" required></p>
                 <p><input class="input form-control" name="location" id="location" placeholder="Location" required></p>
                 <p><input type="date" class="input form-control" name="date" id="date" placeholder="Date Lost/Found" required></p>
-                <p><textarea class="input form-control" name="description" id="description" rows="3" placeholder="Description"></textarea></p>
+                <p><textarea class="input form-control" name="text" id="text" rows="3" placeholder="Item Description"></textarea></p>
                 <button type="submit" class="btn btn-sm btn-success col-sm-4 col-sm-offset-4" onclick="f1.action='lost';f1.method='post'; return true;">
                     <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Submit
                 </button>
