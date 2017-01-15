@@ -15,17 +15,14 @@
     <body>
         <div id="navbar"></div>
         <h1><%= title %></h1>
-        <p>Lost item report</p>
+        <p>Lost Item Report</p>
 
         <form action="" method="post">
-            <div class="col-sm-6 col-sm-offset-3">
-                <p><input class="input form-control" name="first" id="first" placeholder="First Name" required></p>
-                <p><input class="input form-control" name="last" id="last" placeholder="Last Name" required></p>
-                <p><input class="input form-control" name="username" id="username" placeholder="Username" required></p>
-                <p><input class="input form-control" type="password" name="pass" id="pass" placeholder="Password" required></p>
-                <p><input class="input form-control" name="email" id="email" placeholder="Email" required></p>
-                <p><input class="input form-control" name="phone" id="phone" placeholder="Phone number" required></p>
+            <div class="col-sm-6 col-sm-offset-0">
+                <p><input class="input form-control" name="item_name" id="item_name" placeholder="Item" required></p>
+                <p><input class="input form-control" name="date" id="date" placeholder="Date" required></p>
                 <p><input class="input form-control" name="location" id="location" placeholder="Location" required></p>
+                <p><input class="input form-control" name="description" id="description" placeholder="Description  ie. black with a white bow" required></p>
                 <button type="submit" class="btn btn-sm btn-success col-sm-4 col-sm-offset-4">
                     <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Submit
                 </button>
