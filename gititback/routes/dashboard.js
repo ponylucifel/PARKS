@@ -7,7 +7,7 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-    res.render('dashboard', { title: 'Dashboard' });
+    res.render('dashboard', { title: 'Dashboard', username:req.param.username});
 });
 
 module.exports = router;
