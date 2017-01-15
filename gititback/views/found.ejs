@@ -15,6 +15,17 @@
 
         <div id="navbar"></div>
         <h1><%= title %></h1>
-        <p>Found item report</p>
+        <p>Found Item Report</p>
+        <form action="" method="post">
+            <div class="col-sm-6 col-sm-offset-0">
+                <p><input class="input form-control" name="item_name" id="item_name" placeholder="Item" required></p>
+                <p><input class="input form-control" name="date" id="date" placeholder="Date" required></p>
+                <p><input class="input form-control" name="location" id="location" placeholder="Location" required></p>
+                <p><input class="input form-control" name="description" id="description" placeholder="Description  ie. black with a white bow" required></p>
+                <button type="submit" class="btn btn-sm btn-success col-sm-4 col-sm-offset-4">
+                    <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Submit
+                </button>
+            </div>
+        </form>
     </body>
 </html>
