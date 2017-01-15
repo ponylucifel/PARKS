@@ -6,3 +6,29 @@ body {
 a {
   color: #00B7FF;
 }
+
+body#bg{
+  background: url('https://static.pexels.com/photos/36079/pexels-photo.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.textBG{
+  padding: 20px;
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+}
+.siteSlogan {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: #363535 3px 3px 5px;
+  font-variant: small-caps;
+  font-size: 45pt;
+
+  margin: auto;
+  color: white;
+  text-align: center;
+
+}
