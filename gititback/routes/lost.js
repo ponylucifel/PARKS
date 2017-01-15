@@ -15,5 +15,8 @@ router.get('/', function(req, res, next) {
     res.render('lost', { title: 'Lost Item', username:req.body.username});
 });
 
+router.post('/', function(req, res, next){
+    res.render('notify', { message: 'Your request has been submitted succesfully.  You will receive a notification through your email once someone found your item.'})
+});
 
 module.exports = router;
