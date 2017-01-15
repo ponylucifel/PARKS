@@ -10,12 +10,12 @@ var userSchema = new Schema({
     last: String,
     username: String,
     email: String,
-    pass: String,
-    createdTime: {type: Number, default: Date.now},
-    loggedinTime: {type: Number, default: null},
-    browser: {type: String, default: null},
-    OS: {type: String, default: null}
+    password: String,
+    phone: String
+    // createdTime: {type: Number, default: Date.now},
+    // loggedinTime: {type: Number, default: null},
+    // browser: {type: String, default: null},
+    // OS: {type: String, default: null}
 });
 
-module.exports = mongoose.model('users', userSchema);
-
+module.exports = mongoose.model('users', userSchema);	//to collection 'users'

@@ -22,7 +22,7 @@ To install this project, run the following commands:
 
 To start the server for the project, run:
  
-  npm install nodemon
+  npm install -g nodemon
   
   nodemon
  
