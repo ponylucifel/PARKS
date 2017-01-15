@@ -19,6 +19,7 @@
 
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
 var itemModel = require('../models/itemSchema');
 var userModel = require('../models/userSchema');
 var moment = require('moment');
@@ -50,7 +51,4 @@ router.post('/', function(req, res, next){
             res.render('notify', { message: 'Your request has been submitted succesfully.  You will receive a notification through your email once someone found your item.', username:req.body.username})
         }
     });
-});
-
-
 module.exports = router;

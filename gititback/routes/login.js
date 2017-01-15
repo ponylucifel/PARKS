@@ -75,7 +75,7 @@ router.post('/', function(req, res, next) {
 
 
 		console.log("user has logged in successfully!")
-		res.render('dashboard', {title: 'Dashboard', myItemJson: myJsonArray, myRankJson: myRankArray,username: req.body.username});
+		res.render('dashboard', {title: 'Dashboard', username: req.body.username});
 	}
     })
 });
