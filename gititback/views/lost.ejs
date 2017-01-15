@@ -8,25 +8,28 @@
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
     <script>
         $(function(){
-            $("#navbar").load('/templates/navbar.html');
+            $("#navbar").load('/templates/dash_navbar.html');
         });
     </script>
 </head>
     <body>
         <div id="navbar"></div>
-        <h3><%= title %></h3>
+        <h3 class="center"><%= title %></h3>
 
         <form name="f1">
             <div class="col-sm-6 col-sm-offset-3">
 
+                <p><input class="input form-control" name="item_name" id="itemName" placeholder="Item Name" required></p>
                 <p><input type="hidden" class="input form-control" name="username" id="username" value="<%= username%>"></p>
-                <p><input class="input form-control" name="item_name" id="item_name" placeholder="Item Name" required></p>
-                <p><input type="date" class="input form-control" name="date" id="date" required></p>
+                <p><input class="input form-control" name="email" id="email" placeholder="Email" required></p>
+                <p><input class="input form-control" name="phone" id="phone" placeholder="Phone number" required></p>
                 <p><input class="input form-control" name="location" id="location" placeholder="Location" required></p>
+                <p><input type="date" class="input form-control" name="date" id="date" placeholder="Date Lost/Found" required></p>
                 <p><textarea class="input form-control" name="description" id="description" rows="3" placeholder="Description"></textarea></p>
                 <button type="submit" class="btn btn-sm btn-success col-sm-4 col-sm-offset-4" onclick="f1.action='lost';f1.method='post'; return true;">
                     <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Submit
                 </button>
+
             </div>
         </form>
     </body>

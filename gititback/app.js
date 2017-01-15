@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var moment = require('moment')
 
 mongoose.connect('mongodb://localhost/test');
 
@@ -17,6 +18,8 @@ var dashboard = require('./routes/dashboard');
 var lost = require('./routes/lost');
 var found = require('./routes/found');
 var notify = require('./routes/notify');
+var logout = require('./routes/logout');
+var profile = require('./routes/profile');
 
 
 var app = express();
@@ -42,6 +45,8 @@ app.use('/dashboard', dashboard);
 app.use('/lost', lost);
 app.use('/found', found);
 app.use('/notify', notify);
+app.use('/logout', logout);
+app.use('/profile', profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

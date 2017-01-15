@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 		cursor.on('data', function(doc) {
 		  // Called once for every document
 		  console.log(doc)
-		  JSON.stringify(doc)			
+		  JSON.stringify(doc);
 		  myJsonArray.push(doc)		//join all json into array "result from query"
 		  console.log("myITEMS : %s",myJsonArray)	
 		});
